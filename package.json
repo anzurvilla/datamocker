@@ -1,0 +1,45 @@
+{
+  "name": "datamocker",
+  "version": "1.0.0",
+  "description": "Data-Mocker: Random Data Generator",
+  "main": "",
+  "scripts": {
+    "build": "pkg .",
+    "dev": "nodemon --ignore data/*.json --trace-warnings src/app.js",
+    "start": "node src/app.js",
+    "test": "mocha test/app.test.js"
+  },
+  "dependencies": {
+    "clear": "^0.1.0",
+    "colors": "^1.4.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.4",
+    "moment": "^2.29.3"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.16",
+    "request": "^2.88.2"
+  },
+  "bin": "src/app.js",
+  "pkg": {
+    "assets": [
+      "./node_modules/*",
+      "./assets/**/*"
+    ],
+    "scripts": "src/**/*.js",
+    "outputPath": "dist",
+    "targets": [
+      "node16-win-x64"
+    ]
+  },
+  "keywords": [
+    "datamocker",
+    "random",
+    "data",
+    "generator"
+  ],
+  "author": "Anzur Villa",
+  "license": "MIT"
+}
